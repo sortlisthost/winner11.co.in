@@ -1,4 +1,5 @@
 function checkLogin() {
+  event.preventDefault();
   const loginName = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
@@ -11,6 +12,7 @@ function checkLogin() {
   sessionStorage.setItem("password", password);
 
   window.location.href = "withdrawal.html";
+
 }
 function submitWithdrawal() {
   const loginName = sessionStorage.getItem("loginName");
